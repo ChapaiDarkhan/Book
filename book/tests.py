@@ -2,7 +2,6 @@ from django.contrib.auth.models import User
 from rest_framework import status
 from rest_framework.test import APITestCase, URLPatternsTestCase
 from django.urls import path, include
-from django.test import Client
 from book.models import Book
 
 
@@ -16,13 +15,8 @@ class BooksTests(APITestCase, URLPatternsTestCase):
         """
         Ensure we can create a new book object.
         """
-        self.username = 'test@gmail.com'
-        self.password = 'test'
-        user = User.objects.create(username=self.username)
-        user.set_password(self.password)
-        user.save()
-        c = Client()
-        self.client_object = c.login(username=self.username, password=self.password)
+        self.user = User.objects.create_user(username='testuser', password='12345')
+        login = self.client.login(username='testuser', password='12345')
 
         url = 'http://localhost:8000/api/book/'
         data = {
