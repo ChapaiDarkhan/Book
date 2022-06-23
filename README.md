@@ -1,4 +1,4 @@
-# News
+# Book
 Create and update book information
 
 ## Installation
