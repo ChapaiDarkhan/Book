@@ -45,5 +45,5 @@ If you want to run test run this command:
 
 For running test with docker-compose:
 ```bash
-sudo docker-compose exec web python manage.py test
+docker-compose exec web python manage.py test
 ```
