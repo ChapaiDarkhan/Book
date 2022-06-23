@@ -1,11 +1,11 @@
 # News
-Create and update news
+Create and update book information
 
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 ```bash
-pip install -r /settings/requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -32,10 +32,13 @@ API page accessible by this URL Local: "http://127.0.0.1:8000/api"
 In api page you can create, delete and update all the data
 
 
-###You can reach this api for managing with news 
+###You can reach this api for managing with books 
 
-https://secret-hollows-82889.herokuapp.com
+http://127.0.0.1:8000/api/book/
 
-You can add news by adding 'api/new-posts' to domain 
 
-Also you can add comment to the post by adding to domain 'api/comment'
+If you want to run test run this command:
+
+```bash
+./manage.py test
+```

@@ -30,7 +30,6 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '0.0.0.0',
-    '172.20.0.2',
 ]
 
 
@@ -55,6 +54,10 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.twitter',
     'book'
 ]
+
+REST_FRAMEWORK = {
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -98,8 +101,8 @@ DATABASES = {
         'NAME': 'books',
         'USER': 'books',
         'PASSWORD': 'books',
-        'HOST': 'postgres',
-        'PORT': '5432',
+        'HOST': '0.0.0.0',
+        'PORT': 5432,
     }
 }
 
